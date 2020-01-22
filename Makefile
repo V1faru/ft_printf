@@ -6,7 +6,7 @@
 #    By: amurtone <amurtone@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/21 08:57:27 by amurtone          #+#    #+#              #
-#    Updated: 2020/01/21 09:00:16 by amurtone         ###   ########.fr        #
+#    Updated: 2020/01/22 10:24:34 by amurtone         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,8 @@ all: $(NAME)
 $(NAME): 
 	make -C $(LIBFT)
 	gcc $(FLAGS) -o $(NAME) $(SRCS) -I $(HEADER) $(ATTATCH)
+	ar -rc $(NAME) $(OBJ) libft/*.o
+	ranlib $(NAME)
 
 clean:
 	rm -f $(OBJ)
