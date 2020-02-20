@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amurtone <amurtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/21 09:20:35 by amurtone          #+#    #+#             */
-/*   Updated: 2020/01/21 09:21:22 by amurtone         ###   ########.fr       */
+/*   Created: 2020/01/23 13:22:19 by amurtone          #+#    #+#             */
+/*   Updated: 2020/02/12 10:22:31 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,59 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
+# include "../libft/libft.h"
 
+# define H				1
+# define HH				2
+# define L				3
+# define LL				4
+# define J				5
+# define Z				6
+# define BIGL			7
+
+# define POSITIVE	 	66
+# define NEGATIVE		88
+
+# define SCONVERSIONS 	"cspdiouxXf%"
+# define SFLAGS 		"#-+ .*0123456789hljz"
+# define ALLSYMBOLS 	"cspdiouxXfyb%#-+ .*0123456789hLljz"
+# define WTF            "cspdiouxXfyb"
+/* create necessary struct */
+typedef struct  s_struct1
+{
+    char    *fmt;
+    int     printed;
+    int     i;
+    int     len;
+    int     minus;
+    int     plus;
+    int     space;
+    int     zero;
+    int     hash;
+    int     width;
+    int     precision;
+    int     precisionf;
+    int     length;
+}               t_struct;
+
+typedef struct  s_struct2
+{
+    char    *str1;
+    char    *str2;
+    int     precision;
+    long double     i;
+    long double     fl;
+    int     zeros;
+    int     precisionaddon;
+    int     padding;
+    int     beforedcmnbr;
+    char     c;
+    char     sign;
+    int     signint;
+    int     hash;
+    int     dot;
+}               t_struct2;
+/* prototype of functions */
+void    ft_error(char *msg);
+void    ft_widthasterisk(const char *fmt, t_struct *stru, va_list ap);
 #endif
