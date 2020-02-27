@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 14:36:16 by amurtone          #+#    #+#             */
-/*   Updated: 2020/02/26 13:49:32 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/02/27 13:25:02 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,40 @@
 
 void	raligned(t_struct *stru, char c, char *str, int i)
 {
-
+	if (stru->minus != 0)
+	{
+		c = ' ';
+		if (stru->precisionf && i > stru->precision)
+			i = stru->precision;
+		stru->len = stru->len + write(1, str, i);
+		stru->printed = stru->printed + i;
+		while (stru->width > i)
+		{
+			stru->len = stru->len + write(1, &c, 1);
+			stru->printed++;
+			stru->width--;
+		}
+	}
 }
 
 void	laligned(t_struct *stru, char c, char *str, int i)
 {
-	
+	if (stru->minus == 0)
+	{
+		if (stru->precisionf && i > stru->precision)
+			i = stru->precision;
+		if (stru->width > i)
+		{
+			while ((stru->width - i) > 0)
+			{
+				stru->len = stru->len + write (1, &c, 1);
+				stru->printed++;
+				stru->width--;
+			}
+		}
+		stru->len = stru->len + write(1, str, i);
+		stru->printed = stru->printed + i;
+	}
 }
 
 void	ifnull(void *str, t_struct *stru)
@@ -31,7 +59,7 @@ void	ifnull(void *str, t_struct *stru)
 	}
 }
 
-void	charparse(t_struct *stru, va_list ap)
+void	ifstring(t_struct *stru, va_list ap)
 {
 	char	*str;
 	int		i;
@@ -50,9 +78,4 @@ void	charparse(t_struct *stru, va_list ap)
 	else if (stru->minus == 0)
 		laligned(stru, c, str, i);
 	
-}
-
-void	ifstring(t_struct *stru, va_list ap)
-{
-	charparse(stru, ap);
 }
