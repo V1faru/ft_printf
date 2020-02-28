@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pointer.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amurtone <amurtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amurtone <student.hive.fi>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 13:14:30 by amurtone          #+#    #+#             */
-/*   Updated: 2020/02/27 14:44:33 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/02/28 16:08:40 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		hex_count(unsigned long long n)
 	return (i);
 }
 
-int		ralgined(int width, int precision, int hex, char *str)
+int		ralginedp(int width, int precision, int hex, char *str)
 {
 	int		i;
 
@@ -45,7 +45,7 @@ int		ralgined(int width, int precision, int hex, char *str)
 	return (i);
 }
 
-int		lalgined(int width, int precision, int hex, char *str)
+int		lalginedp(int width, int precision, int hex, char *str)
 {
 	int		i;
 
@@ -81,8 +81,8 @@ void	ifp(t_struct *stru, va_list ap, int oxheading)
 	if (stru->precisionf && stru->precision == 0)
 		hex = 0;
 	if (stru->minus)
-		stru->printed = stru->printed + laligned(width, precision, hex, str);
+		stru->printed = stru->printed + lalignedp(width, precision, hex, str);
 	else
-		stru->printed = stru->printed + raligned(width, precision, hex, str);
+		stru->printed = stru->printed + ralignedp(width, precision, hex, str);
 	free(str);
 }

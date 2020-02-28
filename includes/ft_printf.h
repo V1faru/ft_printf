@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: amurtone <student.hive.fi>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 13:22:19 by amurtone          #+#    #+#             */
-/*   Updated: 2020/02/12 10:22:31 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/02/28 16:20:29 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
+# include <limits.h>
 # include "../libft/libft.h"
 
 # define H				1

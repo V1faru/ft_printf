@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   strings.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amurtone <amurtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amurtone <student.hive.fi>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 14:36:16 by amurtone          #+#    #+#             */
-/*   Updated: 2020/02/27 13:25:02 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/02/28 16:08:09 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-void	raligned(t_struct *stru, char c, char *str, int i)
+void	ralignedstr(t_struct *stru, char c, char *str, int i)
 {
 	if (stru->minus != 0)
 	{
@@ -30,7 +30,7 @@ void	raligned(t_struct *stru, char c, char *str, int i)
 	}
 }
 
-void	laligned(t_struct *stru, char c, char *str, int i)
+void	lalignedstr(t_struct *stru, char c, char *str, int i)
 {
 	if (stru->minus == 0)
 	{
@@ -74,8 +74,8 @@ void	ifstring(t_struct *stru, va_list ap)
 		str = "(null)";
 	i = ft_strlen(str);
 	if (stru->minus == 1)
-		raligned(stru, c, str, i);
+		ralignedstr(stru, c, str, i);
 	else if (stru->minus == 0)
-		laligned(stru, c, str, i);
+		lalignedstr(stru, c, str, i);
 	
 }
