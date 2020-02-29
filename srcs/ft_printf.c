@@ -6,11 +6,41 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 13:21:31 by amurtone          #+#    #+#             */
-/*   Updated: 2020/02/03 09:54:42 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/02/29 03:28:06 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+
+void	initialize(t_struct *stru)
+{
+	stru->i = 0;
+	stru->printed = 0;
+	stru->len = 0;
+	stru->minus = 0;
+	stru->plus = 0;
+	stru->space = 0;
+	stru->zero = 0;
+	stru->hash = 0;
+	stru->width = 0;
+	stru->precisionf = 0;
+	stru->precision = 0;
+	stru->length = 0;
+}
+
+void	reinitialize(t_struct *stru)
+{
+	stru->len = 0;
+	stru->minus = 0;
+	stru->plus = 0;
+	stru->space = 0;
+	stru->zero = 0;
+	stru->hash = 0;
+	stru->width = 0;
+	stru->precisionf = 0;
+	stru->precision = 0;
+	stru->length = 0;
+}
 
 int		ft_printf(const char *fmt, ...)
 {
@@ -22,7 +52,8 @@ int		ft_printf(const char *fmt, ...)
 	fmtlen = ft_strlen(fmt);
 	if (!(stru = (t_struct *)malloc(sizeof(t_struct))))
 		exit(1);
-	stru->fmt = fmt;
+	initialize(stru);
+	stru->fmt = (char *)fmt;
 	va_start(ap, fmt);
 	if (!fmt[0])
 		ft_error("invalid string; usage: ft_printf(\"character: %\c\", 65)");

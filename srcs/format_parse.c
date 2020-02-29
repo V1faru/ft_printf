@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 10:11:04 by amurtone          #+#    #+#             */
-/*   Updated: 2020/02/06 09:31:25 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/02/29 03:41:15 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,12 @@
 int     ft_fmtparse2(t_struct *stru, int i, const char *fmt, va_list ap)
 {
     stru->i = i;
-    if (!ft_strchr("cspdiouxXfyb%", fmt[i]))
+    if (!ft_strchr("cspdiouxXfb%", fmt[i]))
         ft_modifiers(fmt, stru, ap);
-    else if (ft_strchr("cspdiouxXfyb%", fmt[i]))
+    else if (ft_strchr("cspdiouxXfb%", fmt[i]))
     {
         ft_conversions(fmt[i], stru, ap);
+        reinitialize(stru);
     }
     return (stru->i - 1);
 }
@@ -37,9 +38,9 @@ int     ft_fmtparse(const char *fmt, t_struct *stru, va_list ap, int i)
             while (ft_strchr(ALLSYMBOLS, fmt[i + 1]))
             {
                 i = i + 1;
-                if (ft_strchr("cspdiouxXfyb%", fmt[i]))
+                if (ft_strchr("cspdiouxXfb%", fmt[i]))
                 {
-                    i = ft_fmtparse2(stru, i, fmt, ap) + 2;
+                    i = ft_fmtparse2(stru, i, fmt, ap) + 2; //check what is the two...
                     break ;
                 }
                 else

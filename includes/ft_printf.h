@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amurtone <student.hive.fi>                 +#+  +:+       +#+        */
+/*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 13:22:19 by amurtone          #+#    #+#             */
-/*   Updated: 2020/02/28 16:20:29 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/02/29 03:24:51 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@
 
 # define SCONVERSIONS 	"cspdiouxXf%"
 # define SFLAGS 		"#-+ .*0123456789hljz"
-# define ALLSYMBOLS 	"cspdiouxXfyb%#-+ .*0123456789hLljz"
-# define WTF            "cspdiouxXfyb"
+# define ALLSYMBOLS 	"cspdiouxXfb%#-+ .*0123456789hLljz"
+# define WTF            "cspdiouxXfb"
 /* create necessary struct */
 typedef struct  s_struct1
 {
