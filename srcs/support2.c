@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 04:46:32 by amurtone          #+#    #+#             */
-/*   Updated: 2020/02/29 12:05:51 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/02 14:03:59 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,15 @@ char	*ft_itoa_base_upper(intmax_t nbr, intmax_t base)
 	}
 	(i == 0) ? str[i] = '-' : 0;
 	return (str);
+}
+
+char	findchar(t_struct *stru)
+{
+	char	c;
+
+	if (stru->zero && !stru->precisionf)
+		c = '0';
+	else
+		c = ' ';
+	return (c);	
 }

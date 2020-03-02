@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/23 13:22:19 by amurtone          #+#    #+#             */
-/*   Updated: 2020/02/29 03:24:51 by amurtone         ###   ########.fr       */
+/*   Created: 2020/03/02 16:06:16 by amurtone          #+#    #+#             */
+/*   Updated: 2020/03/02 16:06:40 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,13 @@
 # define SFLAGS 		"#-+ .*0123456789hljz"
 # define ALLSYMBOLS 	"cspdiouxXfb%#-+ .*0123456789hLljz"
 # define WTF            "cspdiouxXfb"
-/* create necessary struct */
-typedef struct  s_struct1
+
+typedef	struct	s_struct1
 {
-    char    *fmt;
-    int     printed;
-    int     i;
-    int     len;
+	char    *fmt;
+	int     printed;
+	int     i;
+	int     len;
     int     minus;
     int     plus;
     int     space;
@@ -52,24 +52,24 @@ typedef struct  s_struct1
     int     length;
 }               t_struct;
 
-typedef struct  s_struct2
+typedef	struct	s_struct2
 {
-    char    *str1;
-    char    *str2;
-    int     precision;
-    long double     i;
-    long double     fl;
-    int     zeros;
-    int     precisionaddon;
-    int     padding;
-    int     beforedcmnbr;
-    char     c;
-    char     sign;
-    int     signint;
-    int     hash;
-    int     dot;
-}               t_struct2;
-/* prototype of functions */
-void    ft_error(char *msg);
+    char			*str1;
+    char			*str2;
+    int				precision;
+    long double		i;
+    long double		fl;
+    int				zeros;
+    int				precisionaddon;
+    int				padding;
+    int     		beforedcmnbr;
+    char			c;
+    char			sign;
+    int				signint;
+    int				hash;
+    int				dot;
+}				t_struct2;
+
+void	ft_error(char *msg);
 void    ft_widthasterisk(const char *fmt, t_struct *stru, va_list ap);
 #endif

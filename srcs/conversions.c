@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   conversions.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amurtone <amurtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 09:53:19 by amurtone          #+#    #+#             */
-/*   Updated: 2020/02/24 13:35:31 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/02 13:41:07 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ void    conversions(char c, va_list ap, t_struct *stru)
         iffloat(stru, ap);
     else if (c == '%')
         ifpercent(stru);
-    else if (c == 'y')
-        ifcat();
     else if (c == 'b')
         ifbinary(stru, ap);
 }

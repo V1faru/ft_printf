@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ints.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amurtone <student.hive.fi>                 +#+  +:+       +#+        */
+/*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 15:20:31 by amurtone          #+#    #+#             */
-/*   Updated: 2020/02/28 16:45:23 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/02 13:57:27 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int		zerondwidth(t_struct *stru, char c, char signc, int sign)
+int		zeroandwidth(t_struct *stru, char c, char signc, int sign)
 {
 	if (stru->width > 0 && c == '0')
 	{
