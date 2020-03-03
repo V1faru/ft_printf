@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 16:06:16 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/02 16:06:40 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/03 14:18:20 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,5 +71,26 @@ typedef	struct	s_struct2
 }				t_struct2;
 
 void	ft_error(char *msg);
+void    writeblanks(int n);
+void	writezeros(int n);
+int		signed_nbr_len(intmax_t n, int base);
+int		unsigned_nbr_len(uintmax_t n, int base);
 void    ft_widthasterisk(const char *fmt, t_struct *stru, va_list ap);
+char	*ft_itoa_base_upper(intmax_t nbr, intmax_t base);
+char	findchar(t_struct *stru);
+void	reinitialize(t_struct *stru);
+void    ft_modifiers(const char *fmt, t_struct *stru, va_list ap);
+void    conversions(char c, va_list ap, t_struct *stru);
+void    ifchar(t_struct *stru, va_list ap);
+void    ifpercent(t_struct *stru);
+void	ifstring(t_struct *stru, va_list ap);
+void	ifp(t_struct *stru, va_list ap, int oxheading);
+void    ifint(t_struct *stru, va_list ap, int sign, intmax_t n);
+void	ifoctal(t_struct *stru, va_list ap);
+void	ifudint(t_struct *stru, va_list ap);
+void	ifhex(t_struct *stru, va_list ap, char x);
+void	iffloat(t_struct *stru, va_list ap);
+void	lalignedfloat(t_struct *stru, t_struct2 fstru);
+void	ralignedfloat(t_struct *stru, t_struct2 fstru);
+void	ifbinary(t_struct *stru, va_list ap);
 #endif
