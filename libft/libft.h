@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 12:53:08 by amurtone          #+#    #+#             */
-/*   Updated: 2020/01/29 09:54:30 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/03 17:58:17 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 
 int					get_next_line(const int fd, char **line);
-char    			*ft_stradd(char *str, char c);
+char				*ft_stradd(char *str, char c);
 char				*ft_itoa_base_unsigned(size_t nbr, int base);
 char				*ft_itoa_base(unsigned int nbr, int base);
 

@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/29 10:02:22 by amurtone          #+#    #+#             */
-/*   Updated: 2020/01/29 10:10:26 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/03 17:56:06 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,22 @@ static char		convert(int i)
 	return (nbrs[i]);
 }
 
-char            *ft_itoa_base(unsigned int nbr, int base)
+char			*ft_itoa_base(unsigned int nbr, int base)
 {
-    char    c;
-    char    *str;
+	char	c;
+	char	*str;
 
-    str = NULL;
-    if (nbr >= (unsigned int)base)
-        str = ft_itoa_base(nbr / base, base);
-    c = convert(nbr % base);
-    return (ft_stradd(str, c));
+	str = NULL;
+	if (nbr >= (unsigned int)base)
+		str = ft_itoa_base(nbr / base, base);
+	c = convert(nbr % base);
+	return (ft_stradd(str, c));
 }
 
 char			*ft_itoa_base_unsigned(size_t nbr, int base)
 {
 	char	c;
-	char 	*str;
+	char	*str;
 
 	str = NULL;
 	if (nbr >= (size_t)base)
