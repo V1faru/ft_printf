@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 14:17:04 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/02 15:56:13 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/03 14:45:24 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ void	ralignedhex(t_struct *stru, int hexlen, char *str, char x)
 	while (stru->precision-- > 0)
 		stru->printed += write(1, "0", 1);
 	stru->printed += write(1, str, hexlen);
+	free(str);
 }
 
 void	lalignedhex(t_struct *stru, int hexlen, char *str, char x)
@@ -60,6 +61,7 @@ void	lalignedhex(t_struct *stru, int hexlen, char *str, char x)
 	stru->printed += write(1, str, hexlen);
 	while (stru->width-- > 0)
 		stru->printed += write(1, " ", 1);
+	free(str);
 }
 
 void	formathex(uintmax_t n, t_struct *stru, char x, int hexlen)
@@ -89,7 +91,6 @@ void	formathex(uintmax_t n, t_struct *stru, char x, int hexlen)
 		ralignedhex(stru, hexlen, str, x);
 	else if (stru->minus == 1)
 		lalignedhex(stru, hexlen, str, x);
-	free(str);
 }
 
 void	ifhex(t_struct *stru, va_list ap, char x)

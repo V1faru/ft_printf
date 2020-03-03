@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 16:39:52 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/03 14:05:51 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/03 14:27:17 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	ralignedfloat(t_struct *stru, t_struct2 fstru)
 	{
 		if (fstru.signint == 1 && fstru.sign)
 		{
-			stru->printed += wrote(1, &fstru.sign, 1);
+			stru->printed += write(1, &fstru.sign, 1);
 			fstru.sign = 'a';
 			stru->space = 0;
 		}

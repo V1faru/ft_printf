@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 13:40:16 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/02 14:16:31 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/03 14:48:26 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void	formatuint(uintmax_t n, t_struct *stru, int sign)
 	if (stru->space && sign != 0)
 		stru->space = 0;
 	str = ft_itoa_base(n, 10);
-	intlen = unisgned_nbr_len(n, 10);
+	intlen = unsigned_nbr_len(n, 10);
 	if (n == 0)
 		intlen = 1;
 	if (stru->precisionf && stru->precision == 0)

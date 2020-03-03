@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 15:35:36 by amurtone          #+#    #+#             */
-/*   Updated: 2020/01/23 15:46:25 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/03 14:26:29 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char    *ft_stradd(char *str, char c)
         if (!(new = ft_strnew(len + 1)))
             return (NULL);
         ft_strcat(new, str);
-        ft_strdel(str);
+        ft_strdel(&str);
     }
     else
         new = ft_strnew(1);

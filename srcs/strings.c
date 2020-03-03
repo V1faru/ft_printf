@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   strings.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amurtone <student.hive.fi>                 +#+  +:+       +#+        */
+/*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 14:36:16 by amurtone          #+#    #+#             */
-/*   Updated: 2020/02/28 16:08:09 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/03 14:47:58 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void	ifstring(t_struct *stru, va_list ap)
 	else
 		c = ' ';
 	str = (char *)va_arg(ap, char *);
-	if (str == NULL);
+	if (str == NULL)
 		str = "(null)";
 	i = ft_strlen(str);
 	if (stru->minus == 1)

@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 16:06:16 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/03 14:18:20 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/03 14:35:22 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,9 +78,10 @@ int		unsigned_nbr_len(uintmax_t n, int base);
 void    ft_widthasterisk(const char *fmt, t_struct *stru, va_list ap);
 char	*ft_itoa_base_upper(intmax_t nbr, intmax_t base);
 char	findchar(t_struct *stru);
+int     ft_fmtparse(const char *fmt, t_struct *stru, va_list ap, int i);
 void	reinitialize(t_struct *stru);
 void    ft_modifiers(const char *fmt, t_struct *stru, va_list ap);
-void    conversions(char c, va_list ap, t_struct *stru);
+void    ft_conversions(char c, t_struct *stru, va_list ap);
 void    ifchar(t_struct *stru, va_list ap);
 void    ifpercent(t_struct *stru);
 void	ifstring(t_struct *stru, va_list ap);

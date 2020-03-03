@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pointer.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amurtone <student.hive.fi>                 +#+  +:+       +#+        */
+/*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 13:14:30 by amurtone          #+#    #+#             */
-/*   Updated: 2020/02/28 16:08:40 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/03 14:47:30 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int		hex_count(unsigned long long n)
 	return (i);
 }
 
-int		ralginedp(int width, int precision, int hex, char *str)
+int		ralignedp(int width, int precision, int hex, char *str)
 {
 	int		i;
 
@@ -45,7 +45,7 @@ int		ralginedp(int width, int precision, int hex, char *str)
 	return (i);
 }
 
-int		lalginedp(int width, int precision, int hex, char *str)
+int		lalignedp(int width, int precision, int hex, char *str)
 {
 	int		i;
 
