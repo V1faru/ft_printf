@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   char.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amurtone <amurtone@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 13:36:03 by amurtone          #+#    #+#             */
-/*   Updated: 2020/02/24 14:34:51 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 14:32:33 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,13 @@ void    ifchar(t_struct *stru, va_list ap)
         else if (stru->zero == 0)
             writeblanks(nbr);
         write(1, &c, 1);
+        stru->printed = stru->printed + nbr;
+    }
+    else if (stru->width && stru->minus == 1)
+    {
+        nbr = stru->width - 1;
+        write(1, &c, 1);
+        writeblanks(nbr);
         stru->printed = stru->printed + nbr;
     }
     else
