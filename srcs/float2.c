@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 16:39:52 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/03 14:27:17 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 16:40:05 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ralignedfloat3(t_struct *stru, t_struct2 fstru)
 		fstru.str2++;
 		fstru.precision--;
 	}
-	while (fstru.precision-- > 0)
+	while (fstru.precisionaddon-- > 0)
 		stru->printed += write(1, "0", 1);
 }
 
