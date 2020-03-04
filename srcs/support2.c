@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 04:46:32 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/04 13:56:42 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 14:09:31 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_itoa_base_m(uintmax_t nbr, uintmax_t base)
 
 	i = 1;
 	n = nbr;
-	while ((n /= base >= 1))
+	while ((n /= base) >= 1)
 		i++;
 	if (!(str = (char *)malloc(sizeof(char) * (i + 1))))
 		exit(1);
