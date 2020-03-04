@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 16:06:16 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/04 14:09:55 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 16:59:26 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <stdlib.h>
 # include <stdarg.h>
 # include <limits.h>
+# include <stdint.h>
+# include <float.h>
 # include "../libft/libft.h"
 
 # define H				1
