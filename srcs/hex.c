@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 14:17:04 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/04 13:57:54 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 14:22:09 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	rhashzero(t_struct *stru, int hexlen, char *str, char x)
 		while (stru->precision-- > 0)
 			stru->printed += write(1, "0", 1);
 		stru->printed += write(1, str, hexlen);
+		return ;
 	}
 }
 
@@ -37,7 +38,10 @@ void	ralignedhex(t_struct *stru, int hexlen, char *str, char x)
 
 	c = findchar(stru);
 	if (c == '0' && stru->hash == 2)
+	{
 		rhashzero(stru, hexlen, str, x);
+		return ;
+	}		
 	while (stru->width-- > 0)
 		stru->printed += write(1, &c, 1);
 	if (stru->hash == 2 && x == 'x')
