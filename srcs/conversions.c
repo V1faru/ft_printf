@@ -6,13 +6,13 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/13 09:53:19 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/03 14:30:51 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 18:45:38 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-void    ft_conversions(char c,t_struct *stru, va_list ap)
+void    ft_conversions(char c, t_struct *stru, va_list ap)
 {
     if (c == 'c')
         ifchar(stru, ap);

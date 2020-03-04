@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 13:21:31 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/04 13:09:59 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 18:32:04 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int		ft_printf(const char *fmt, ...)
 		return (0);
 	}
 	if (fmtlen == 1 && fmt[0] == '%')
-		exit(1);
+		return (0);
 	else
 		result = ft_fmtparse(fmt, stru, ap, 0);
 	va_end(ap);

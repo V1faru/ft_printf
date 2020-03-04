@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 10:11:04 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/03 14:11:00 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 18:36:00 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,13 @@ int     ft_fmtparse(const char *fmt, t_struct *stru, va_list ap, int i)
         else if (fmt[i] == '%')
         {
             if (!ft_strchr(ALLSYMBOLS, fmt[i + 1]))
-                break;
+                break ;
             while (ft_strchr(ALLSYMBOLS, fmt[i + 1]))
             {
                 i = i + 1;
                 if (ft_strchr("cspdiouxXfb%", fmt[i]))
                 {
-                    i = ft_fmtparse2(stru, i, fmt, ap) + 2; //check what is the two...
+                    i = ft_fmtparse2(stru, i, fmt, ap) + 2;
                     break ;
                 }
                 else

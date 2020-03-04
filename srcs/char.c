@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 13:36:03 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/04 14:32:33 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 18:47:28 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void    ifpercent(t_struct *stru)
     }
     else if (stru->width && stru->minus == 1)
     {
-        nbr = stru->width -1;
+        nbr = stru->width - 1;
         write(1, "%", 1);
         writeblanks(nbr);
         stru->printed = stru->printed + nbr + 1;
