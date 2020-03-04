@@ -3,31 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amurtone <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 14:57:22 by amurtone          #+#    #+#             */
-/*   Updated: 2019/10/25 10:24:57 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 15:57:02 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_atoi(const char *str)
 {
-	int res;
-	int sign;
+	int		sign;
+	int		ans;
+	int		len;
 
-	res = 0;
+	ans = 0;
 	sign = 1;
-	while (*str && (*str == ' ' || *str == '\n' || *str == '\t' ||
-					*str == '\v' || *str == '\f' || *str == '\r'))
-		++str;
-	if (*str == '-')
-		sign = -1;
-	if (*str == '-' || *str == '+')
-		++str;
-	while (*str && *str >= '0' && *str <= '9')
-	{
-		res = res * 10 + (*str - 48);
-		++str;
-	}
-	return (res * sign);
+	len = 0;
+	while (*str && (*str == '\t' || *str == '\f' || *str == '\r'
+				|| *str == '\n' || *str == '\v' || *str == ' '))
+		str++;
+	sign = (*str == '-') ? -1 : 1;
+	(*str == '-' || *str == '+') ? str++ : str;
+	while (ft_isdigit(str[len]))
+		len++;
+	if (len > 19)
+		return ((sign > 0) ? -1 : 0);
+	while (*str && *str >= 48 && *str <= 57)
+		ans = ans * 10 + (*str++ - '0');
+	return (sign * ans);
 }
