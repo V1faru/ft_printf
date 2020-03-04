@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 15:20:31 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/02 13:57:27 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 16:21:18 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ void	formatint(intmax_t n, t_struct *stru, int sign)
     int		intlength;
 	char	*str;
 
-	if (stru->space  && sign != 0)
+	if (stru->space && sign != 0)
 		stru->space = 0;
 	str = ft_itoa_base_upper(n, 10);
 	intlength = signed_nbr_len(n, 10);
@@ -124,7 +124,7 @@ void    ifint(t_struct *stru, va_list ap, int sign, intmax_t n)
     }
     if (n == LLONG_MIN)
     {
-        stru->printed += write(1, "-922337203685477580", 20);
+        stru->printed += write(1, "-9223372036854775808", 20);
         return ;
     }
     formatint(n, stru, sign);
