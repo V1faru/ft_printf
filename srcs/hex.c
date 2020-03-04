@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 14:17:04 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/03 14:45:24 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 13:57:54 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	formathex(uintmax_t n, t_struct *stru, char x, int hexlen)
 	char	*str;
 
 	if (x == 'x')
-		str = ft_itoa_base(n, 16);
+		str = ft_itoa_base_m(n, 16);
 	else if (x == 'X')
 		str = ft_itoa_base_upper(n, 16);
 	if (stru->hash)

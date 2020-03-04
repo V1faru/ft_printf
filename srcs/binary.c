@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 13:04:54 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/03 14:05:44 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 13:59:00 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	formatbinary(uintmax_t n, t_struct *stru)
 	int 	widthb;
 	char	*str;
 
-	str = ft_itoa_base(n, 2);
+	str = ft_itoa_base_m(n, 2);
 	binarylen = unsigned_nbr_len(n, 2);
 	if (n == 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 13:21:31 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/03 14:34:30 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 13:09:59 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,10 @@ int		ft_printf(const char *fmt, ...)
 	stru->fmt = (char *)fmt;
 	va_start(ap, fmt);
 	if (!fmt[0])
-		ft_error("invalid string; usage: ft_printf(\"character: \%c\", 65)");
+	{
+		ft_error();
+		return (0);
+	}
 	if (fmtlen == 1 && fmt[0] == '%')
 		exit(1);
 	else

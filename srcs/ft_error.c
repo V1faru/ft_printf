@@ -6,14 +6,14 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/31 09:26:33 by amurtone          #+#    #+#             */
-/*   Updated: 2020/01/31 09:32:53 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 12:57:15 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-void    ft_error(char *msg)
+void	ft_error(void)
 {
-    ft_putendl(msg);
-    exit(1);
+	write(1, "", 0);
+	exit(1);
 }

@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 13:14:30 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/03 14:47:30 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 14:01:33 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void	ifp(t_struct *stru, va_list ap, int oxheading)
 
 	pointer = (unsigned long long)va_arg(ap, void *);
 	hex = hex_count(pointer) + 1;
-	str = ft_itoa_base(pointer, 16);
+	str = ft_itoa_base_m(pointer, 16);
 	precision = stru->precision - hex;
 	width = stru->width - hex - oxheading;
 	if (stru->precisionf && stru->precision == 0)

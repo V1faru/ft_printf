@@ -6,11 +6,33 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 04:46:32 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/02 14:03:59 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 13:56:42 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+
+char	*ft_itoa_base_m(uintmax_t nbr, uintmax_t base)
+{
+	char				*str;
+	unsigned long long	n;
+	int					i;
+
+	i = 1;
+	n = nbr;
+	while ((n /= base >= 1))
+		i++;
+	if (!(str = (char *)malloc(sizeof(char) * (i + 1))))
+		exit(1);
+	str[i] = '\0';
+	n = nbr;
+	while (i-- > 0)
+	{
+		str[i] = (n % base < 10) ? n % base + '0' : n % base + 'a' - 10;
+		n /= base;
+	}
+	return (str);
+}
 
 char	*ft_itoa_base_upper(intmax_t nbr, intmax_t base)
 {

@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 12:07:52 by amurtone          #+#    #+#             */
-/*   Updated: 2020/02/29 14:10:14 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 14:01:16 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	formatoctal(uintmax_t n, t_struct *stru)
 	int 	width;
 	char 	*str;
 
-	str = ft_itoa_base(n, 8);
+	str = ft_itoa_base_m(n, 8);
 	octlen = unsigned_nbr_len(n, 8);
 	if (n == 0)
 	{
