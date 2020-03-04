@@ -6,9 +6,11 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 14:57:22 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/04 15:57:02 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/04 16:01:31 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_atoi(const char *str)
 {
