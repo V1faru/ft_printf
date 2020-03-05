@@ -6,13 +6,13 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 15:20:31 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/05 13:11:10 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/05 13:45:17 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-int		zeroandwidth(t_struct *stru, char c, char signc, int sign)
+int		szandw(t_struct *stru, char c, char signc, int sign)
 {
 	if (stru->width > 0 && c == '0')
 	{
@@ -23,7 +23,7 @@ int		zeroandwidth(t_struct *stru, char c, char signc, int sign)
 		}
 		if (signc != '\0')
 			stru->printed += write(1, &signc, 1);
-		signc -= sign;
+		sign -= sign;
 	}
 	return (sign);
 }
@@ -42,7 +42,7 @@ void    ralignedint(t_struct *stru, int intlength, char *str, int sign)
 		signc = '+';
 	else if (sign == NEGATIVE)
 		signc = '-';
-	sign = zeroandwidth(stru, c, signc, sign);
+	sign = szandw(stru, c, signc, sign);
 	while (stru->width-- > 0)
 		stru->printed += write(1, &c, 1);
 	if (stru->space != 0)
