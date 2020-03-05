@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 15:57:23 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/05 13:10:31 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/05 15:38:13 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ t_struct2	formatfloat3(t_struct2 fstru, t_struct *stru)
 	fstru.hash = 0;
 	if (stru->hash)
 		fstru.hash = 1;
-	if (stru->hash && ft_strlen(fstru.str2) > 0)
+	if (stru->hash && ft_strlen(fstru.s2) > 0)
 		fstru.hash = 0;
 	fstru.dot = 0;
-	if ((ft_strlen(fstru.str2) > 0 && fstru.precision !=0) || stru->hash)
+	if ((ft_strlen(fstru.s2) > 0 && fstru.precision !=0) || stru->hash)
 		fstru.dot = 1;
 	if (fstru.precision != 0)
 		fstru.padding = stru->width - stru->precision - fstru.beforedcmnbr
@@ -60,7 +60,7 @@ t_struct2	formatfloat2(t_struct2 fstru, t_struct *stru, long double n)
 	if (stru->precisdot == 1 && stru->precision >= 0)
 		fstru.precision = stru->precision;
 	fstru.i = (long long)n;
-	fstru.str1 = ft_itoa_base_m(fstru.i, 10);
+	fstru.s1 = ft_itoa_base_m(fstru.i, 10);
 	n = n - (long double)fstru.i;
 	fstru.precisionaddon = 0;
 	if (n == 0)
@@ -69,12 +69,12 @@ t_struct2	formatfloat2(t_struct2 fstru, t_struct *stru, long double n)
 	fstru.fl = (n >= 0) ? (long)(n + 0.5) : (long)(n - 0.5);
 	if (fstru.fl == power(10, fstru.precision) && fstru.fl != 0)
 	{
-		fstru.str1 = ft_itoa_base_m(fstru.i + 1, 10);
+		fstru.s1 = ft_itoa_base_m(fstru.i + 1, 10);
 		fstru.fl = 0;
 		if (fstru.fl == 0)
 			fstru.precisionaddon = fstru.precision - 1;
 	}
-	fstru.str2 = ft_itoa_base_m(fstru.fl, 10);
+	fstru.s2 = ft_itoa_base_m(fstru.fl, 10);
 	if (fstru.precision != 0)
 		fstru.zeros = fstru.precision - signed_nbr_len(fstru.fl, 10);
 	else
@@ -108,8 +108,8 @@ void	formatfloat(long double n, t_struct *stru)
 		fstru.c = ' ';
 	fstru = formatfloat2(fstru, stru, n);
 	fstru = formatfloat3(fstru, stru);
-	free(fstru.str1);
-	free(fstru.str2);		
+	free(fstru.s1);
+	free(fstru.s2);		
 }
 
 void	iffloat(t_struct *stru, va_list ap)

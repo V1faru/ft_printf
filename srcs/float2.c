@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 16:39:52 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/05 13:14:06 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/05 15:41:55 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ void	ralignedfloat3(t_struct *stru, t_struct2 fstru)
 		fstru.zeros--;
 		fstru.precision--;
 	}
-	while (*fstru.str2 && fstru.precision != 0)
+	while (*fstru.s2 && fstru.precision != 0)
 	{
-		stru->printed += write(1, fstru.str2, 1);
-		fstru.str2++;
+		stru->printed += write(1, fstru.s2, 1);
+		fstru.s2++;
 		fstru.precision--;
 	}
 	while (fstru.precisionaddon-- > 0)
@@ -48,10 +48,10 @@ void	ralignedfloat2(t_struct *stru, t_struct2 fstru, char space)
 	if (fstru.sign != 'a' && fstru.signint)
 		if (fstru.signint == 1 && fstru.sign)
 			stru->printed += write(1, &fstru.sign, 1);
-	while (*fstru.str1)
+	while (*fstru.s1)
 	{
-		stru->printed += write(1, fstru.str1, 1);
-		fstru.str1++;
+		stru->printed += write(1, fstru.s1, 1);
+		fstru.s1++;
 	}
 }
 
@@ -84,10 +84,10 @@ void	ralignedfloat(t_struct *stru, t_struct2 fstru)
 
 void	lalignedfloat2(t_struct *stru, t_struct2 fstru)
 {
-	while (*fstru.str2 && fstru.precision != 0)
+	while (*fstru.s2 && fstru.precision != 0)
 	{
-		stru->printed += write(1, fstru.str2, 1);
-		fstru.str2++;
+		stru->printed += write(1, fstru.s2, 1);
+		fstru.s2++;
 		fstru.precision--;
 	}
 	if (stru->space && fstru.sign == '-' && fstru.precision > 0)
@@ -112,10 +112,10 @@ void	lalignedfloat(t_struct *stru, t_struct2 fstru)
 	}
 	if (fstru.signint == 1 && fstru.sign)
 		stru->printed += write(1, &fstru.sign, 1);
-	while(*fstru.str1)
+	while(*fstru.s1)
 	{
-		stru->printed += write(1, fstru.str1, 1);
-		fstru.str1++;
+		stru->printed += write(1, fstru.s1, 1);
+		fstru.s1++;
 	}
 	if (fstru.dot == 1 || stru->hash)
 		stru->printed += write(1, ".", 1);

@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 16:06:16 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/05 13:22:34 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/05 15:34:21 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,8 @@ typedef	struct			s_struct1
 
 typedef	struct			s_struct2
 {
-	char				*str1;
-	char				*str2;
+	char				*s1;
+	char				*s2;
 	int					precision;
 	long double			i;
 	long double			fl;
@@ -99,4 +99,6 @@ void					iffloat(t_struct *stru, va_list ap);
 void					lalignedfloat(t_struct *stru, t_struct2 fstru);
 void					ralignedfloat(t_struct *stru, t_struct2 fstru);
 void					ifbinary(t_struct *stru, va_list ap);
+
+
 #endif
