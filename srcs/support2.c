@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 04:46:32 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/04 14:09:31 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/05 13:13:00 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ char	findchar(t_struct *stru)
 {
 	char	c;
 
-	if (stru->zero && !stru->precisionf)
+	if (stru->zero && !stru->precisdot)
 		c = '0';
 	else
 		c = ' ';

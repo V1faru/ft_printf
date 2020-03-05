@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 13:21:31 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/04 18:32:04 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/05 13:04:11 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	initialize(t_struct *stru)
 	stru->zero = 0;
 	stru->hash = 0;
 	stru->width = 0;
-	stru->precisionf = 0;
+	stru->precisdot = 0;
 	stru->precision = 0;
 	stru->length = 0;
 }
@@ -37,7 +37,7 @@ void	reinitialize(t_struct *stru)
 	stru->zero = 0;
 	stru->hash = 0;
 	stru->width = 0;
-	stru->precisionf = 0;
+	stru->precisdot = 0;
 	stru->precision = 0;
 	stru->length = 0;
 }

@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/06 09:33:04 by amurtone          #+#    #+#             */
-/*   Updated: 2020/02/13 09:52:44 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/05 13:05:23 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void    precision(const char *fmt, t_struct *stru, va_list ap, int p)
     if (fmt[i] == '.')
     {
         i++;
-        stru->precisionf = 1;
+        stru->precisdot = 1;
         if (fmt[i] >= '0' && fmt[i] <= '9')
         {
             stru->precision = ft_atoi(&fmt[i]);
@@ -76,7 +76,7 @@ void    precision(const char *fmt, t_struct *stru, va_list ap, int p)
 			if (p >= 0)
 				stru->precision = p;
 			else if (p < 0)
-				stru->precisionf = 0;
+				stru->precisdot = 0;
 			while (fmt[stru->i] == '*')
 				i++;
 		}

@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 13:40:16 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/04 14:02:17 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/05 13:13:58 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +81,9 @@ void	formatuint(uintmax_t n, t_struct *stru, int sign)
 	intlen = unsigned_nbr_len(n, 10);
 	if (n == 0)
 		intlen = 1;
-	if (stru->precisionf && stru->precision == 0)
+	if (stru->precisdot && stru->precision == 0)
 		intlen = 0;
-	if (stru->precisionf && stru->precision > intlen)
+	if (stru->precisdot && stru->precision > intlen)
 		stru->precision = stru->precision - intlen;
 	else
 		stru->precision = 0;

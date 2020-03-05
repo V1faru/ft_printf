@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 16:06:16 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/04 16:59:26 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/05 13:22:34 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ typedef	struct			s_struct1
 	int					hash;
 	int					width;
 	int					precision;
-	int					precisionf;
+	int					precisdot;
 	int					length;
 }						t_struct;
 

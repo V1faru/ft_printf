@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 13:04:54 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/04 13:59:00 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/05 13:10:34 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,10 @@ void	formatbinary(uintmax_t n, t_struct *stru)
 		binarylen = 1;
 		if (stru->hash == 1)
 			binarylen = 0;
-		if (stru->precisionf && stru->precision == 0)
+		if (stru->precisdot && stru->precision == 0)
 			binarylen = 0;
 	}
-	if (stru->precisionf && stru->precision > binarylen)
+	if (stru->precisdot && stru->precision > binarylen)
 		stru->precision = stru->precision - binarylen - stru->hash;
 	else
 		stru->precision = 0;

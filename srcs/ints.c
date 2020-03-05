@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 15:20:31 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/04 16:21:18 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/05 13:11:10 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void    ralignedint(t_struct *stru, int intlength, char *str, int sign)
 	char	signc;
 	char	c;
 
-	if (stru->zero && !stru->precisionf)
+	if (stru->zero && !stru->precisdot)
 		c = '0';
 	else
 		c = ' ';
@@ -86,9 +86,9 @@ void	formatint(intmax_t n, t_struct *stru, int sign)
 	intlength = signed_nbr_len(n, 10);
 	if (n == 0)
 		intlength = 1;
-	if (stru->precisionf == 1 && stru->precision == 0 && n == 0)
+	if (stru->precisdot == 1 && stru->precision == 0 && n == 0)
 		intlength = 0;
-	if (stru->precisionf && stru->precision > intlength)
+	if (stru->precisdot && stru->precision > intlength)
 		stru->precision = stru->precision - intlength;
 	else
 		stru->precision = 0;

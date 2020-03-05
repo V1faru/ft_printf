@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 14:17:04 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/04 14:22:09 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/05 13:10:27 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,10 +83,10 @@ void	formathex(uintmax_t n, t_struct *stru, char x, int hexlen)
 		hexlen = 1;
 		if (stru->hash == 2)
 			stru->hash = 0;
-		if (stru->precisionf && stru->precision == 0)
+		if (stru->precisdot && stru->precision == 0)
 			hexlen = 0;
 	}
-	if (stru->precisionf && stru->precision > hexlen)
+	if (stru->precisdot && stru->precision > hexlen)
 		stru->precision = stru->precision - hexlen;
 	else
 		stru->precision = 0;

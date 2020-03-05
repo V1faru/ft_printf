@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/29 12:07:52 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/04 14:01:16 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/05 13:11:47 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	raligned_octal(t_struct *stru, int width, int octlen, char *str)
 {
 	char c;
 
-	if (stru->zero && !stru->precisionf)
+	if (stru->zero && !stru->precisdot)
 		c = '0';
 	else 
 		c = ' ';
@@ -54,10 +54,10 @@ void	formatoctal(uintmax_t n, t_struct *stru)
 		octlen = 1;
 		if (stru->hash == 1)
 			octlen = 0;
-		if (stru->precisionf && stru->precision == 0)
+		if (stru->precisdot && stru->precision == 0)
 			octlen = 0;
 	}
-	if (stru->precisionf && stru->precision > octlen)
+	if (stru->precisdot && stru->precision > octlen)
 		stru->precision = stru->precision - octlen - stru->hash;
 	else
 		stru->precision = 0;

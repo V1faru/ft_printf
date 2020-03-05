@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/24 14:36:16 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/03 14:47:58 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/05 13:12:18 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ralignedstr(t_struct *stru, char c, char *str, int i)
 	if (stru->minus != 0)
 	{
 		c = ' ';
-		if (stru->precisionf && i > stru->precision)
+		if (stru->precisdot && i > stru->precision)
 			i = stru->precision;
 		stru->len = stru->len + write(1, str, i);
 		stru->printed = stru->printed + i;
@@ -34,7 +34,7 @@ void	lalignedstr(t_struct *stru, char c, char *str, int i)
 {
 	if (stru->minus == 0)
 	{
-		if (stru->precisionf && i > stru->precision)
+		if (stru->precisdot && i > stru->precision)
 			i = stru->precision;
 		if (stru->width > i)
 		{

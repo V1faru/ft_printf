@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 15:57:23 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/04 19:06:18 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/05 13:10:31 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ t_struct2	formatfloat3(t_struct2 fstru, t_struct *stru)
 
 t_struct2	formatfloat2(t_struct2 fstru, t_struct *stru, long double n)
 {
-	if (stru->precisionf == 1 && stru->precision >= 0)
+	if (stru->precisdot == 1 && stru->precision >= 0)
 		fstru.precision = stru->precision;
 	fstru.i = (long long)n;
 	fstru.str1 = ft_itoa_base_m(fstru.i, 10);

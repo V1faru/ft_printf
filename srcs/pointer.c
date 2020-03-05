@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/27 13:14:30 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/04 18:54:39 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/05 13:12:01 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	ifp(t_struct *stru, va_list ap, int oxheading)
 	str = ft_itoa_base_m(pointer, 16);
 	precision = stru->precision - hex;
 	width = stru->width - hex - oxheading;
-	if (stru->precisionf && stru->precision == 0)
+	if (stru->precisdot && stru->precision == 0)
 		hex = 0;
 	if (stru->minus)
 		stru->printed = stru->printed + lalignedp(width, precision, hex, str);

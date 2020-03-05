@@ -6,7 +6,7 @@
 /*   By: amurtone <amurtone@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 16:39:52 by amurtone          #+#    #+#             */
-/*   Updated: 2020/03/04 16:40:05 by amurtone         ###   ########.fr       */
+/*   Updated: 2020/03/05 13:14:06 by amurtone         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ralignedfloat3(t_struct *stru, t_struct2 fstru)
 
 void	ralignedfloat2(t_struct *stru, t_struct2 fstru, char space)
 {
-	if (stru->precision == 0 && stru->precisionf == 1)
+	if (stru->precision == 0 && stru->precisdot == 1)
 		space = ' ';
 	if (stru->precision == 0 && stru->zero == 0 && stru->width != 0)
 		space = ' ';
